@@ -7,6 +7,15 @@ body {
     word-wrap: break-word;
 }
 
+#sidebar {
+    position: fixed;
+    top:0;
+    left: 0;
+    bottom: 0;
+    padding: 0;
+    height: 100%
+}
+
 a:link { color: default; text-decoration: none;}
 a:visited { color: default; text-decoration: none;}
 a:hover { color: default; text-decoration: none;}
@@ -153,30 +162,31 @@ div.main-title {
 }
 
 .sub {
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 40px;
+    padding-right: 40px;
     margin-left: auto;
     margin-right: auto;
+    overflow-x:auto;
+    overflow-y:auto;
 }
 
 .sub-content {
     margin-top:30px;
+    margin-bottom: 25px;
     line-height: 25px;
+    overflow-x:auto;
+    overflow-y:auto;
 }
 
 .sub-content-row {
     margin-top: 0;
     margin-bottom: 0;
-    overflow-x: auto;
+    overflow-x:auto;
+    overflow-y:auto;
     padding-top: 30px;
     -webkit-overflow-scrolling: touch;
     position: relative;
-    mask-image: -webkit-linear-gradient(to right, transparent, white 10px, white 90%, transparent);
-    mask-image: -moz-linear-gradient(to right, transparent, white 10px, white 90%, transparent);
-    mask-image: linear-gradient(to right, transparent, white 10px, white 90%, transparent);
-    -webkit-mask-image: -webkit-linear-gradient(to right, transparent, white 10px, white 90%, transparent);
-    -webkit-mask-image: -moz-linear-gradient(to right, transparent, white 10px, white 90%, transparent);
-    -webkit-mask-image: linear-gradient(to right, transparent, white 10px, white 90%, transparent);
+    
 }
 
 .sub-content-box {
@@ -214,7 +224,20 @@ div.main-title {
     font-size: 20px;
 }
 
-h3 {
+.sub-content-image {
+    height: 180px;
+    width: 240px;
+    margin: 0 12px 4px 0;
+}
+
+.sub-content > p {
+    margin-top: 30px;
+    font-size: 17px;
+    line-height: 1.7;
+    max-width: 42em;
+}
+
+.sub-content > h3 {
     display: block;
     font-size: 1.17em;
     margin-block-start: 1em;
@@ -228,7 +251,8 @@ h3 {
     .sub-content-row {
         margin-top: 0;
         margin-bottom: 0;
-        overflow-x: auto;
+        overflow-x:auto;
+        overflow-y:auto;
         padding-top: 30px;
         -webkit-overflow-scrolling: touch;
         position: relative;
@@ -240,6 +264,7 @@ h3 {
         -webkit-mask-image: linear-gradient(to right, transparent, white 10px, white 90%, transparent);
     }
     .sub-content-box {
+        margin-top: 20px;
         display: block;
         white-space: nowrap;
     }
@@ -258,15 +283,95 @@ h3 {
         margin-right: 20px;
         padding-bottom: 40px;
     }
-}
-.sub > div.row { 
-    text-align: center; 
-    border: 1px solid gray; 
+
+    .sub-content-image {
+        height: 120px;
+        width: 240px;
+        margin: 0 12px 4px 0;
+    }
+
+    .sub-content > p {
+        font-size: 16px;
+        margin-top: 25px;
+    }
 }
 
-.sub > div.col:nth-child(3n+2) { background: yellow; }
-.sub > div.col:nth-child(3n+3) { background: lightgreen; }
-
-.container-fluid {
+.footer {
+    clear: both;
+    margin: 0;
     padding: 0;
+    background: #313131;
+    position: relative;
+    bottom: 0;
+    height: 120px;
+    width: 100%;
+    color: white;
+    font-family: "Noto Sans KR", sans-serif;
+}
+
+.footer .section {
+    position: relative;
+    font-weight: 300;
+}
+
+.footer > .section > .inside {
+    position: relative;
+    margin: 0 auto;
+}
+
+.footer .add_sec {
+    border-top: 1px solid #3C3C3C;
+    padding-top: 20px;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+.footer .add_sec .info .address {
+    margin-top: 3px;
+    font-size: 11px;
+    letter-spacing: -0.1em;
+}
+
+.footer .add_sec .info .contact {
+    margin-top: 6px;
+    font-size: 11px;
+}
+
+.footer .add_sec .info .copyright {
+    margin-top: 6px;
+    font-size: 10px;
+}
+
+@media (max-width: 779px){
+    .footer .section {
+        padding: 0 40px;
+        font-weight: 300;
+    }
+
+    .footer .section > .inside {
+        width: auto;
+    }
+
+    .footer .add_sec {
+        border-top: 1px solid #3C3C3C;
+        padding-top: 20px;
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+
+    .footer .add_sec .info .address {
+        margin-top: 3px;
+        font-size: 11px;
+        letter-spacing: -0.1em;
+    }
+
+    .footer .add_sec .info .contact {
+        margin-top: 6px;
+        font-size: 11px;
+    }
+
+    .footer .add_sec .info .copyright {
+        margin-top: 6px;
+        font-size: 10px;
+    }
 }
