@@ -74,7 +74,7 @@ a:hover { color: default; text-decoration: none;}
     vertical-align: middle;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 990px) {
     .bar-logo {
         height: 20px;
         margin: 24px;
@@ -103,17 +103,13 @@ div.main-contents {
 	line-height: 1.4;
 }
 
-div.main_title {
+div.main-title {
 	font-size: 4rem;
 	font-weight: bold;
 	letter-spacing: -0.05ch;
 	line-height: 0.9;
     margin-bottom: 32px;
     font-family: "Noto Sans KR", sans-serif;
-}
-
-.container-fluid {
-    padding: 0;
 }
 
 .main-title {
@@ -136,17 +132,9 @@ div.main_title {
     color: #505050;
 }
 
-.main-button {
-    margin-top: 54px;
-    font-size: 12px;
-    font-weight: 600;
-    color: #ffd900;
-    display: block;
-}
-
-@media (min-width: 768px) {
+@media (min-width: 779px) {
     .main-row {
-        height: 400px;
+        height: 260px;
     }
 
     .main-title {
@@ -162,9 +150,123 @@ div.main_title {
         font-weight: 300;
         color: #4b4b4b;
     }
+}
 
-    .main-button {
-        margin-top: 72px;
-        font-size: 20px;
+.sub {
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.sub-content {
+    margin-top:30px;
+    line-height: 25px;
+}
+
+.sub-content-row {
+    margin-top: 0;
+    margin-bottom: 0;
+    overflow-x: auto;
+    padding-top: 30px;
+    -webkit-overflow-scrolling: touch;
+    position: relative;
+    mask-image: -webkit-linear-gradient(to right, transparent, white 10px, white 90%, transparent);
+    mask-image: -moz-linear-gradient(to right, transparent, white 10px, white 90%, transparent);
+    mask-image: linear-gradient(to right, transparent, white 10px, white 90%, transparent);
+    -webkit-mask-image: -webkit-linear-gradient(to right, transparent, white 10px, white 90%, transparent);
+    -webkit-mask-image: -moz-linear-gradient(to right, transparent, white 10px, white 90%, transparent);
+    -webkit-mask-image: linear-gradient(to right, transparent, white 10px, white 90%, transparent);
+}
+
+.sub-content-box {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: row;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+}
+
+.sub-content-col {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: column;
+    flex: 0 1 33%;
+    margin-left: 40px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -webkit-flex: 0 1 33%;
+}
+
+.sub-content-title {
+    margin-bottom: 20px;
+    color: #6d6d6d;
+    padding-top: 0;
+    font-weight: 300;
+    font-size: 20px;
+}
+
+h3 {
+    display: block;
+    font-size: 1.17em;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
+
+@media (max-width: 779px){
+    .sub-content-row {
+        margin-top: 0;
+        margin-bottom: 0;
+        overflow-x: auto;
+        padding-top: 30px;
+        -webkit-overflow-scrolling: touch;
+        position: relative;
+        mask-image: -webkit-linear-gradient(to right, transparent, white 10px, white 90%, transparent);
+        mask-image: -moz-linear-gradient(to right, transparent, white 10px, white 90%, transparent);
+        mask-image: linear-gradient(to right, transparent, white 10px, white 90%, transparent);
+        -webkit-mask-image: -webkit-linear-gradient(to right, transparent, white 10px, white 90%, transparent);
+        -webkit-mask-image: -moz-linear-gradient(to right, transparent, white 10px, white 90%, transparent);
+        -webkit-mask-image: linear-gradient(to right, transparent, white 10px, white 90%, transparent);
     }
+    .sub-content-box {
+        display: block;
+        white-space: nowrap;
+    }
+
+    .sub-content-col:first-of-type {
+        margin-left: 10px;
+        margin-top: 0;
+    }
+
+    .sub-content-col {
+        display: inline-block;
+        vertical-align: top;
+        margin-left: 0;
+        white-space: normal;
+        width: 75%;
+        margin-right: 20px;
+        padding-bottom: 40px;
+    }
+}
+.sub > div.row { 
+    text-align: center; 
+    border: 1px solid gray; 
+}
+
+.sub > div.col:nth-child(3n+2) { background: yellow; }
+.sub > div.col:nth-child(3n+3) { background: lightgreen; }
+
+.container-fluid {
+    padding: 0;
 }
