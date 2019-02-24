@@ -11,12 +11,56 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em" crossorigin="anonymous"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?"></script>
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/latest/css/bootstrap.min.css">
 
     <link rel="stylesheet" type="text/css" href="{% static 'main/index.css' %}">
-    <link rel="stylesheet" type="text/css" href="{% static 'main/sub.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'main/contact.css' %}">
+
+    <script>
+        function initialize() {
+            var Y_point = 37.549814; // Y 좌표
+            var X_point = 126.9389516; // X 좌표
+            var zoomLevel = 17; // 첫 로딩시 보일 지도의 확대 레벨
+            var markerTitle = "서강대학교 리찌과학관"; // 현재 위치 마커에 마우스를 올렸을때 나타나는 이름
+            var markerMaxWidth = 300; // 마커를 클릭했을때 나타나는 말풍선의 최대 크기
+
+            // 말풍선 내용
+            var contentString = '<div id="content">' +
+            '<div id="siteNotice">' +
+            '</div>' +
+            '<h3 id="firstHeading" class="firstHeading">서강대학교 리찌과학관</h3>' +
+            '<div id="bodyContent">' +
+            '<p>CNU, R912호<br/>' +
+            '</div>' +
+            '</div>';
+
+            var myLatlng = new google.maps.LatLng(Y_point, X_point);
+            var mapOptions = {
+                zoom: zoomLevel,
+                center: myLatlng,
+                mapTypeId: google.maps.MapTypeId.ROADMAP
+            }
+            var map = new google.maps.Map(document.getElementById('map_view'), mapOptions);
+
+            var marker = new google.maps.Marker({
+                position: myLatlng,
+                map: map,
+                title: markerTitle
+            });
+
+            var infowindow = new google.maps.InfoWindow({
+                content: contentString,
+                maxWidth: markerMaxWidth
+            });
+
+            google.maps.event.addListener(marker, 'click', function() {
+                infowindow.open(map, marker);
+            });
+        }
+    </script>
 </head>
-<body>
+<body onload="initialize()">
     <nav class="bar navbar navbar-expand-lg navbar-light">
         <div class="bar-logo">
             <a href="http://127.0.0.1:8000/">
@@ -43,6 +87,68 @@
         </div>
     </div>
     
+    <div class='contact'>
+        <div class='contact_container'>
+            <div class='box'>
+                <div class='row'>
+                    <div class='col-sm-3'>
+                        <h2>위치</h2>
+                    </div>
+                    <div class='col-sm-8'>
+                        <p>04107 서울특별시 마포구 백범로 35(신수동)<br>
+                        서강대학교 리찌과학관(R) 912호 컴퓨터공학과</p>
+                        <div id="map_view" style="width:500px; height:300px;"></div>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class='box'>
+                <div class='row'>
+                    <div class='col-sm-3'>
+                        <h2>임원진</h2>
+                    </div>
+                    <div class='col-sm-8'>
+                        <p>학회장   <a href="mailto:mymelody126@naver.com">(mymelody126@naver.com)</a></p>
+                        <p>부학회장 <a href="mailto:rnldudns98a@naver.com">(rnldudns98a@naver.com)</a></p>
+                        <p>스터디장 <a href="mailto:leejihoon19@naver.com">(leejihoon19@naver.com)</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
+    <div class='footer'>
+        <div class='section add_sec'>
+            <div class='inside'>
+                <div class='info'>
+                    <div class='address'>
+                        <div class='row'>
+                            <div class='col-sm-4'>
+                                Sogang Univ. CSE CNU
+                            </div>
+                            <div class='col-sm-6'>                                    
+                                04107 서울특별시 마포구 백범로 35(신수동) 
+                                서강대학교 리찌과학관(R) 912호 컴퓨터공학과
+                            </div>
+                        </div>
+                    </div>
+                    <div class='contact'>
+                        <div class='row'>
+                            <div class='col-sm-4'>
+                                Contact
+                            </div>
+                            <div class='col-sm-6'>
+                                학회장   <a href="mailto:mymelody126@naver.com">(mymelody126@naver.com)</a><br>
+                                부학회장 <a href="mailto:rnldudns98a@naver.com">(rnldudns98a@naver.com)</a><br>
+                            </div>
+                        </div>
+                    </div>
+                    <div class='copyright'>
+                       Copyright © 2019 CNU All rights reserved.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
