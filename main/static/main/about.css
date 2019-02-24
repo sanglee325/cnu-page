@@ -11,3 +11,29 @@
     padding-top: 32px;
     padding-bottom: 32px;
 }
+
+.text_container .box {
+    margin: 16px 12px 0px;
+    background-color: white;
+    border-radius: 4px;
+}
+
+h2 {
+    color: #660000;
+    font-size: 36px;
+}
+
+p {
+    color: #222222;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+@media (max-width: 779px){
+    .text_container {
+        padding-left: 32px; 
+        padding-right: 32px;
+        padding-top: 16px;
+        padding-bottom: 16px;
+    }
+}
