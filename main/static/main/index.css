@@ -1,19 +1,15 @@
 @import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
+html {
+    overflow-x: auto;
+    overflow-y: auto;
+}
+
 
 body {
     font-family: 'Noto Sans KR', sans-serif;
     background-color: rgb(255, 255, 255);
     word-break: keep-all;
     word-wrap: break-word;
-}
-
-#sidebar {
-    position: fixed;
-    top:0;
-    left: 0;
-    bottom: 0;
-    padding: 0;
-    height: 100%
 }
 
 a:link { color: default; text-decoration: none;}
@@ -83,20 +79,34 @@ a:hover { color: default; text-decoration: none;}
     vertical-align: middle;
 }
 
-@media (min-width: 990px) {
+@media (max-width: 376px) {
     .bar-logo {
-        height: 20px;
-        margin: 24px;
+        height: 16px;
+        margin: 12px;
+        position: relative;
+        vertical-align: middle;
     }
 
     .bar-logo-image {
-        height: 24px;
+        height: 20px;
         margin: 0 12px 4px 0;
     }
 
     .bar-logo-text {
         font-weight: 700;
-    font-size: 20px;
+        font-size: 20px;
+    }
+
+    .bar_container li.item {
+        display: inline-block;
+        padding-left: 12px;
+        font-weight: bold;
+        font-size: 12px;
+        -moz-user-select: none;
+        -khtml-user-select: none;
+        -webkit-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
     }
 }
 
@@ -166,23 +176,18 @@ div.main-title {
     padding-right: 40px;
     margin-left: auto;
     margin-right: auto;
-    overflow-x:auto;
-    overflow-y:auto;
 }
 
 .sub-content {
     margin-top:30px;
     margin-bottom: 25px;
     line-height: 25px;
-    overflow-x:auto;
-    overflow-y:auto;
 }
 
 .sub-content-row {
     margin-top: 0;
     margin-bottom: 0;
-    overflow-x:auto;
-    overflow-y:auto;
+    overflow-y: auto;
     padding-top: 30px;
     -webkit-overflow-scrolling: touch;
     position: relative;
@@ -251,8 +256,7 @@ div.main-title {
     .sub-content-row {
         margin-top: 0;
         margin-bottom: 0;
-        overflow-x:auto;
-        overflow-y:auto;
+        overflow-x: auto;
         padding-top: 30px;
         -webkit-overflow-scrolling: touch;
         position: relative;
@@ -297,14 +301,14 @@ div.main-title {
 }
 
 .footer {
+    position: fixed;
+    bottom:0;
+    width:100%;
     clear: both;
     margin: 0;
     padding: 0;
     background: #313131;
-    position: relative;
-    bottom: 0;
     height: 120px;
-    width: 100%;
     color: white;
     font-family: "Noto Sans KR", sans-serif;
 }
@@ -343,6 +347,19 @@ div.main-title {
 }
 
 @media (max-width: 779px){
+    .footer {
+        position: fixed;
+        bottom:0;
+        width:100%;
+        clear: both;
+        margin: 0;
+        padding: 0;
+        background: #313131;
+        height: 120px;
+        color: white;
+        font-family: "Noto Sans KR", sans-serif;
+    }
+    
     .footer .section {
         padding: 0 40px;
         font-weight: 300;
@@ -362,7 +379,6 @@ div.main-title {
     .footer .add_sec .info .address {
         margin-top: 3px;
         font-size: 11px;
-        letter-spacing: -0.1em;
     }
 
     .footer .add_sec .info .contact {
