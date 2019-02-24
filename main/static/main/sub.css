@@ -1,0 +1,130 @@
+@import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
+
+.sub {
+    padding-left: 40px;
+    padding-right: 40px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.sub-content {
+    margin-top:30px;
+    margin-bottom: 25px;
+    line-height: 25px;
+}
+
+.sub-content-row {
+    margin-top: 0;
+    margin-bottom: 0;
+    overflow-y: auto;
+    padding-top: 30px;
+    -webkit-overflow-scrolling: touch;
+    position: relative;
+    
+}
+
+.sub-content-box {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: row;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+}
+
+.sub-content-col {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: column;
+    flex: 0 1 33%;
+    margin-left: 40px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -webkit-flex: 0 1 33%;
+}
+
+.sub-content-title {
+    margin-bottom: 20px;
+    color: #6d6d6d;
+    padding-top: 0;
+    font-weight: 300;
+    font-size: 20px;
+}
+
+.sub-content-image {
+    height: 180px;
+    width: 240px;
+    margin: 0 12px 4px 0;
+}
+
+.sub-content > p {
+    margin-top: 30px;
+    font-size: 17px;
+    line-height: 1.7;
+    max-width: 42em;
+}
+
+.sub-content > h3 {
+    display: block;
+    font-size: 1.17em;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
+
+@media (max-width: 779px){
+    .sub-content-row {
+        margin-top: 0;
+        margin-bottom: 0;
+        overflow-x: auto;
+        padding-top: 30px;
+        -webkit-overflow-scrolling: touch;
+        position: relative;
+        mask-image: -webkit-linear-gradient(to right, transparent, white 10px, white 90%, transparent);
+        mask-image: -moz-linear-gradient(to right, transparent, white 10px, white 90%, transparent);
+        mask-image: linear-gradient(to right, transparent, white 10px, white 90%, transparent);
+        -webkit-mask-image: -webkit-linear-gradient(to right, transparent, white 10px, white 90%, transparent);
+        -webkit-mask-image: -moz-linear-gradient(to right, transparent, white 10px, white 90%, transparent);
+        -webkit-mask-image: linear-gradient(to right, transparent, white 10px, white 90%, transparent);
+    }
+    .sub-content-box {
+        margin-top: 20px;
+        display: block;
+        white-space: nowrap;
+    }
+
+    .sub-content-col:first-of-type {
+        margin-left: 10px;
+        margin-top: 0;
+    }
+
+    .sub-content-col {
+        display: inline-block;
+        vertical-align: top;
+        margin-left: 0;
+        white-space: normal;
+        width: 75%;
+        margin-right: 20px;
+        padding-bottom: 40px;
+    }
+
+    .sub-content-image {
+        height: 120px;
+        width: 240px;
+        margin: 0 12px 4px 0;
+    }
+
+    .sub-content > p {
+        font-size: 16px;
+        margin-top: 25px;
+    }
+}
