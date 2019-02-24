@@ -14,4 +14,4 @@ def manage(request):
     return render(request, 'main/building.html', {'manage': manage}) 
 
 def contact(request):
-    return render(request, 'main/building.html', {'contact': contact})
+    return render(request, 'main/contact.html', {'contact': contact})
