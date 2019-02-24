@@ -11,9 +11,10 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/latest/css/bootstrap.min.css">
 
     <link rel="stylesheet" type="text/css" href="{% static 'main/index.css' %}">
-
+    <link rel="stylesheet" type="text/css" href="{% static 'main/building.css' %}">
 </head>
 <body>
     <nav class="bar navbar navbar-expand-lg navbar-light">
@@ -23,12 +24,12 @@
             </a>
         </div>
         <div class="bar_container">
-        <ul>
-            <li class="item"><a href="/about">About</a></li>
-            <li class="item"><a href="/manage">Lab Manage</a></li>
-            <li class="item"><a href="/contact">Contact</a></li>
-        </ul>
-    </div>
+            <ul>
+                <li class="item"><a href="/about">About</a></li>
+                <li class="item"><a href="/manage">Lab Manage</a></li>
+                <li class="item"><a href="/contact">Contact</a></li>
+            </ul>
+        </div>
     </nav>
 
     <div class="main-contents">
@@ -41,3 +42,50 @@
             </div>
         </div>
     </div>
+
+    <div class='building'>
+        <div class='build_container'>
+            <div class='manage-box'>
+                <h1>관리 시간표</h1>
+            </div>
+            <div class='build-box'>
+                <h2>아직 관리 시간표가 만들어지지 않았습니다.</h2>
+            </div>
+        </div>
+    </div>
+
+    <div class='footer'>
+        <div class='section add_sec'>
+            <div class='inside'>
+                <div class='info'>
+                    <div class='address'>
+                        <div class='row'>
+                            <div class='col-sm-4'>
+                                Sogang Univ. CSE CNU
+                            </div>
+                            <div class='col-sm-6'>                                    
+                                04107 서울특별시 마포구 백범로 35(신수동) 
+                                서강대학교 리찌과학관(R) 912호 컴퓨터공학과
+                            </div>
+                        </div>
+                    </div>
+                    <div class='contact'>
+                        <div class='row'>
+                            <div class='col-sm-4'>
+                                Contact
+                            </div>
+                            <div class='col-sm-6'>
+                                학회장   <a href="mailto:mymelody126@naver.com">(mymelody126@naver.com)</a><br>
+                                부학회장 <a href="mailto:rnldudns98a@naver.com">(rnldudns98a@naver.com)</a><br>
+                            </div>
+                        </div>
+                    </div>
+                    <div class='copyright'>
+                       Copyright © 2019 CNU All rights reserved.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
