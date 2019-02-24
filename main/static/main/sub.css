@@ -4,9 +4,11 @@
     position: relative;
     padding-left: 40px;
     padding-right: 40px;
+    padding-bottom: 20px;
     margin-top: 10px;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 20px;
     -webkit-overflow-scrolling: touch;
 }
 
@@ -131,7 +133,7 @@
 
 .sub-link {
     margin-top: 40px;
-    margin-left: 40px;
+    margin-left: 20px;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
 }
@@ -140,27 +142,47 @@
     margin-top: 0;
 }
 
-.sub-link-title{
-    margin-bottom: 20px;
+.sub-link-title {
+    padding-bottom: 10px;
     color: #6d6d6d;
     padding-top: 0;
-    font-size: 24px
+    font-size: 28px
 }
 
 .sub-connect {
     color: #282c34;
-    max-width: 11em;
-    font-size: 16px;
+    font-size: 20px;
     padding-top: 0;
 }
 
 .sub-connect > a {
     color:  #282c34; 
     text-decoration: none;
+    font-size: 20px;
 }
+
 @media (max-width: 779px){
     .sub-link {
         display: block;
+    }
+
+    .sub-link-title {
+        padding-bottom: 10px;
+        color: #6d6d6d;
+        padding-top: 0;
+        font-size: 20px
+    }
+    
+    .sub-connect {
+        color: #282c34;
+        font-size: 14px;
+        padding-top: 0;
+    }
+    
+    .sub-connect > a {
+        color:  #282c34; 
+        text-decoration: none;
+        font-size: 14px;
     }
 }
 
