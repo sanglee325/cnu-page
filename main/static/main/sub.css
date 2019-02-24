@@ -1,10 +1,13 @@
 @import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
 
 .sub {
+    position: relative;
     padding-left: 40px;
     padding-right: 40px;
+    margin-top: 10px;
     margin-left: auto;
     margin-right: auto;
+    -webkit-overflow-scrolling: touch;
 }
 
 .sub-content {
@@ -20,7 +23,6 @@
     padding-top: 30px;
     -webkit-overflow-scrolling: touch;
     position: relative;
-    
 }
 
 .sub-content-box {
@@ -59,8 +61,7 @@
 }
 
 .sub-content-image {
-    height: 180px;
-    width: 240px;
+    width: 70%;
     margin: 0 12px 4px 0;
 }
 
@@ -118,8 +119,7 @@
     }
 
     .sub-content-image {
-        height: 120px;
-        width: 240px;
+        width: 70%;
         margin: 0 12px 4px 0;
     }
 
@@ -127,4 +127,54 @@
         font-size: 16px;
         margin-top: 25px;
     }
+}
+
+.sub-link {
+    margin-top: 40px;
+    margin-left: 40px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+}
+
+.sub-link:first-child {
+    margin-top: 0;
+}
+
+.sub-link-title{
+    margin-bottom: 20px;
+    color: #6d6d6d;
+    padding-top: 0;
+    font-size: 24px
+}
+
+.sub-connect {
+    color: #282c34;
+    max-width: 11em;
+    font-size: 16px;
+    padding-top: 0;
+}
+
+.sub-connect > a {
+    color:  #282c34; 
+    text-decoration: none;
+}
+@media (max-width: 779px){
+    .sub-link {
+        display: block;
+    }
+}
+
+hr {
+    display: block;
+    unicode-bidi: isolate;
+    margin-block-start: 0.5em;
+    margin-block-end: 0.5em;
+    margin-inline-start: auto;
+    margin-inline-end: auto;
+    overflow: hidden;
+    border-style: inset;
+    height: 1px;
+    margin-bottom: -1px;
+    margin-top: 10px;
+    border-top: 1px solid rgba(110, 110, 110, 0.445);
 }

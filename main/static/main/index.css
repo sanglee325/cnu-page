@@ -1,27 +1,39 @@
 @import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
-html {
-    overflow-x: auto;
-    overflow-y: auto;
-}
-
 
 body {
     font-family: 'Noto Sans KR', sans-serif;
     background-color: rgb(255, 255, 255);
     word-break: keep-all;
     word-wrap: break-word;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+body::-webkit-scrollbar { 
+    display: none; 
 }
 
 a:link { color: default; text-decoration: none;}
 a:visited { color: default; text-decoration: none;}
 a:hover { color: default; text-decoration: none;}
 
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    max-width: 1600px;
+    height: 72px;
+    background: #fff;
+    z-index: 2000000;
+}
+
 .bar {
     position: fixed;
 	top: 0;
 	left: 0;
 	width: 100%;
-	max-width: 1600px;
+	max-width: 1600px;  
 	height: 60px;
     background-color: rgb(39, 28, 28);
     border-bottom: 0.5px solid rgb(51, 51, 51);
@@ -111,14 +123,14 @@ a:hover { color: default; text-decoration: none;}
 }
 
 div.main-contents {
-    position: fixed;
+    position: relative;
 	top: 0;
 	left: 0;
 	width: 100%;
-	max-width: 1600px;
 	height: 260px;
     background-color: rgba(37, 7, 7, 0.904);
-	margin-top: 60px;
+    margin-top: 60px;
+    margin-right: 0;
 	line-height: 1.4;
 }
 
@@ -173,16 +185,13 @@ div.main-title {
 
 
 .footer {
-    position: fixed;
-    bottom:0;
-    width:100%;
-    clear: both;
-    margin: 0;
-    padding: 0;
-    background: #313131;
-    height: 120px;
-    color: white;
-    font-family: "Noto Sans KR", sans-serif;
+    position: relative;
+    background-color: #313131;
+    color: #ffffff;
+    padding-top: 10px;
+    padding-bottom: 30px;
+    margin-top: 20px;
+    padding: 32px 32px;
 }
 
 .footer .section {
@@ -190,16 +199,27 @@ div.main-title {
     font-weight: 300;
 }
 
-.footer > .section > .inside {
+.footer .section .inside {
     position: relative;
     margin: 0 auto;
+    flex-wrap: wrap;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-lines: multiple;
+    -webkit-flex-wrap: wrap;
 }
 
 .footer .add_sec {
-    border-top: 1px solid #3C3C3C;
     padding-top: 20px;
     padding-left: 40px;
     padding-right: 40px;
+}
+
+.footer .add_sec .info {
+    width: 100%
 }
 
 .footer .add_sec .info .address {
@@ -220,16 +240,15 @@ div.main-title {
 
 @media (max-width: 779px){
     .footer {
-        position: fixed;
+        position: relative;
         bottom:0;
         width:100%;
         clear: both;
-        margin: 0;
-        padding: 0;
         background: #313131;
-        height: 120px;
+        height: 200px;
         color: white;
         font-family: "Noto Sans KR", sans-serif;
+        padding: 10px 10px;
     }
     
     .footer .section {
@@ -237,8 +256,8 @@ div.main-title {
         font-weight: 300;
     }
 
-    .footer .section > .inside {
-        width: auto;
+    .footer .section .inside {
+        width: 100%
     }
 
     .footer .add_sec {
@@ -246,6 +265,10 @@ div.main-title {
         padding-top: 20px;
         padding-left: 40px;
         padding-right: 40px;
+    }
+
+    .footer .add_sec .info {
+        width: 100%
     }
 
     .footer .add_sec .info .address {
