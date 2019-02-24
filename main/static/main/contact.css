@@ -1,0 +1,33 @@
+@import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
+
+.contact {
+    position: relative;
+    margin-top: 20px;
+
+}
+
+.contact_container {
+    padding: 32px 64px;
+}
+
+.contact_container .box {
+    margin: 16px 12px 0px;
+    background-color: white;
+    border-radius: 4px;
+}
+h2 {
+    color: #660000;
+    font-size: 36px;
+}
+
+p {
+    color: #222222;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.contact_container a {
+    color:  #6b6b6b;
+    font-size: 16px;
+    text-decoration: none;
+}
