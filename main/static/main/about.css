@@ -1,0 +1,13 @@
+@import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
+
+.text {
+    position: relative;
+    margin-top: 20px;
+}
+
+.text_container {
+    padding-left: 80px; 
+    padding-right: 80px;
+    padding-top: 32px;
+    padding-bottom: 32px;
+}
