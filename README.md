@@ -1,6 +1,6 @@
-# django-lab-manage
+# cnu-page
 
-### What will be provided?
-1. Show the lab schedule.
-2. Show who's managing the lab.
-3. Provides check list of lab managers' duty.
+### web page for cnu
+* failed to host cnu.sogang.ac.kr
+* temporarily hosted on aws console
+* by the limit of free tier, the page requires to be refresh when 400 Bad Request happens 
